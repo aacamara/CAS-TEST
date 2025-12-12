@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Logos from '../components/Logos.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout title="AI Transformation Advisory">
+  <Header />
+  <main>
+    <Hero />
+    <Logos />
+    <Services />
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to transform your<br/>AI strategy into results<span class="accent-dot">?</span></h2>
+          <p class="cta-text">Book a 30-minute discovery call. We'll discuss your challenges, explore opportunities, and determine if there's a fit.</p>
+          <a href="/contact" class="btn btn-accent">
+            Book Discovery Call
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .cta-section {
+    background: var(--bg);
+    padding: 6rem 0;
+    text-align: center;
+  }
+  
+  .cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .cta-title {
+    font-size: var(--text-3xl);
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-text {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+</style>

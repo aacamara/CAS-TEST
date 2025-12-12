@@ -1,0 +1,224 @@
+---
+// Logos.astro - Scrolling logo marquee with dark mode support
+---
+
+<section class="logos-section">
+  <div class="container">
+    <span class="logos-label">Our Network</span>
+  </div>
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <!-- First set of logos -->
+      <div class="logo-item">
+        <img src="/logos/aws-color.png" alt="Amazon Web Services" class="logo-light" />
+        <img src="/logos/aws-white.webp" alt="Amazon Web Services" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/broadcom-white.png" alt="Broadcom" class="logo-light invert-light" />
+        <img src="/logos/broadcom-white.png" alt="Broadcom" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Scotiabank_logo_svg.png" alt="Scotiabank" class="logo-light" />
+        <img src="/logos/Scotiabank_logo_svg.png" alt="Scotiabank" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Desjardins_Group_logo_svg.png" alt="Desjardins" class="logo-light" />
+        <img src="/logos/Desjardins_Group_logo_svg.png" alt="Desjardins" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/fortinet-black.png" alt="Fortinet" class="logo-light" />
+        <img src="/logos/fortinet-white.png" alt="Fortinet" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Pivotal_Software_Logo_svg.png" alt="Pivotal" class="logo-light" />
+        <img src="/logos/Pivotal_Software_Logo_svg.png" alt="Pivotal" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/sinopec-logo_brandlogos_net_kspzx.png" alt="Sinopec" class="logo-light" />
+        <img src="/logos/sinopec-white.png" alt="Sinopec" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Dauphine_logo.png" alt="Paris Dauphine" class="logo-light" />
+        <img src="/logos/Dauphine_logo.png" alt="Paris Dauphine" class="logo-dark invert-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/veriforce-white.png" alt="Veriforce" class="logo-light invert-light" />
+        <img src="/logos/veriforce-white.png" alt="Veriforce" class="logo-dark" />
+      </div>
+      
+      <!-- Duplicate set for seamless loop -->
+      <div class="logo-item">
+        <img src="/logos/aws-color.png" alt="Amazon Web Services" class="logo-light" />
+        <img src="/logos/aws-white.webp" alt="Amazon Web Services" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/broadcom-white.png" alt="Broadcom" class="logo-light invert-light" />
+        <img src="/logos/broadcom-white.png" alt="Broadcom" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Scotiabank_logo_svg.png" alt="Scotiabank" class="logo-light" />
+        <img src="/logos/Scotiabank_logo_svg.png" alt="Scotiabank" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Desjardins_Group_logo_svg.png" alt="Desjardins" class="logo-light" />
+        <img src="/logos/Desjardins_Group_logo_svg.png" alt="Desjardins" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/fortinet-black.png" alt="Fortinet" class="logo-light" />
+        <img src="/logos/fortinet-white.png" alt="Fortinet" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Pivotal_Software_Logo_svg.png" alt="Pivotal" class="logo-light" />
+        <img src="/logos/Pivotal_Software_Logo_svg.png" alt="Pivotal" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/sinopec-logo_brandlogos_net_kspzx.png" alt="Sinopec" class="logo-light" />
+        <img src="/logos/sinopec-white.png" alt="Sinopec" class="logo-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/Dauphine_logo.png" alt="Paris Dauphine" class="logo-light" />
+        <img src="/logos/Dauphine_logo.png" alt="Paris Dauphine" class="logo-dark invert-dark" />
+      </div>
+      <div class="logo-item">
+        <img src="/logos/veriforce-white.png" alt="Veriforce" class="logo-light invert-light" />
+        <img src="/logos/veriforce-white.png" alt="Veriforce" class="logo-dark" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .logos-section {
+    padding: 4rem 0;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    overflow: hidden;
+  }
+  
+  .logos-label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee-wrapper::before,
+  .marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg), transparent);
+  }
+  
+  .marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg), transparent);
+  }
+  
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+  
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 140px;
+    height: 50px;
+  }
+  
+  .logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity var(--transition);
+  }
+  
+  .logo-item:hover img {
+    opacity: 1;
+  }
+  
+  /* Light mode: show light logos, hide dark logos */
+  .logo-light {
+    display: block;
+  }
+  
+  .logo-dark {
+    display: none;
+  }
+  
+  /* Invert white logos for light mode */
+  .logo-light.invert-light {
+    filter: invert(1);
+  }
+  
+  /* Dark mode: hide light logos, show dark logos */
+  [data-theme="dark"] .logo-light {
+    display: none;
+  }
+  
+  [data-theme="dark"] .logo-dark {
+    display: block;
+  }
+  
+  /* Invert dark logos for dark mode (like Dauphine black logo) */
+  [data-theme="dark"] .logo-dark.invert-dark {
+    filter: invert(1);
+  }
+  
+  @media (max-width: 768px) {
+    .logo-item {
+      width: 100px;
+      height: 36px;
+    }
+    
+    .marquee-track {
+      gap: 2.5rem;
+      animation-duration: 20s;
+    }
+    
+    .marquee-wrapper::before,
+    .marquee-wrapper::after {
+      width: 50px;
+    }
+  }
+</style>

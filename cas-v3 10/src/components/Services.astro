@@ -1,0 +1,246 @@
+---
+// Services.astro - Three tiers with pricing
+const services = [
+  {
+    tier: "Tier 1",
+    name: "AI Readiness Diagnostic",
+    duration: "3-day engagement",
+    description: "A rapid assessment to understand where you are and identify your highest-impact AI opportunities.",
+    deliverables: [
+      "Interviews with 5-8 key stakeholders",
+      "Current state assessment across people, process, technology",
+      "AI opportunity identification & mapping",
+      "Prioritized recommendation report",
+      "Executive summary presentation"
+    ],
+    ideal: "Companies exploring AI but unsure where to start"
+  },
+  {
+    tier: "Tier 2",
+    name: "AI Strategy & Roadmap",
+    duration: "1-2 week engagement",
+    popular: true,
+    description: "Deep discovery and strategic planning to build your AI transformation roadmap with clear business cases.",
+    deliverables: [
+      "Everything in Tier 1, plus:",
+      "Competitive landscape & market analysis",
+      "Business case development for top 3 use cases",
+      "Detailed implementation roadmap",
+      "Vendor/build recommendations",
+      "Executive & board-ready presentation"
+    ],
+    ideal: "Mid-market to enterprise companies ready to invest in AI"
+  },
+  {
+    tier: "Tier 3",
+    name: "AI Transformation Program",
+    duration: "3-4 week engagement",
+    description: "End-to-end transformation support from strategy through pilot execution and change management.",
+    deliverables: [
+      "Full Tier 2 deliverables, plus:",
+      "Vendor selection & procurement support",
+      "Pilot design with success metrics & KPIs",
+      "Change management & adoption plan",
+      "Stakeholder enablement workshops",
+      "Optional: CSCX.ai implementation for CS use cases"
+    ],
+    ideal: "Enterprises ready to execute and scale AI initiatives"
+  }
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="label">Services</span>
+      <h2 class="services-title">
+        Choose your<br/>
+        transformation path<span class="accent-dot">.</span>
+      </h2>
+      <p class="services-intro">
+        From rapid diagnostics to full transformation programs, 
+        we meet you where you are and take you where you need to go.
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      {services.map((service) => (
+        <article class="service-card" class:list={[{ popular: service.popular }]}>
+          {service.popular && <span class="popular-badge">Most Popular</span>}
+          <div class="service-header">
+            <span class="service-tier">{service.tier}</span>
+            <h3 class="service-name">{service.name}</h3>
+            <span class="service-duration">{service.duration}</span>
+          </div>
+          <p class="service-description">{service.description}</p>
+          <ul class="service-deliverables">
+            {service.deliverables.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+          <div class="service-ideal">
+            <strong>Ideal for:</strong> {service.ideal}
+          </div>
+          <a href="/contact" class="btn btn-outline service-cta">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background: var(--bg-alt);
+  }
+  
+  .services-header {
+    max-width: 600px;
+    margin-bottom: 4rem;
+  }
+  
+  .services-title {
+    font-size: var(--text-4xl);
+    margin-bottom: 1.5rem;
+  }
+  
+  .services-intro {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+  
+  .service-card {
+    background: var(--bg);
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all var(--transition);
+  }
+  
+  .service-card:hover {
+    border-color: var(--text);
+  }
+  
+  .service-card.popular {
+    border: 2px solid var(--accent);
+  }
+  
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .service-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .service-tier {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-name {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .service-price {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-duration {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  
+  .service-description {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .service-deliverables {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  
+  .service-deliverables li {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .service-deliverables li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  
+  .service-ideal {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    padding: 1rem;
+    background: var(--bg-alt);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .service-ideal strong {
+    color: var(--text);
+  }
+  
+  .service-cta {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+    
+    .services-title {
+      font-size: var(--text-3xl);
+    }
+  }
+</style>

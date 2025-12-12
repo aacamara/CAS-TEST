@@ -1,0 +1,142 @@
+---
+// Header.astro - With actual CAS logo
+const currentPath = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="header-inner container">
+    <a href="/" class="logo">
+      <img src="/logos/cas-black.png" alt="CAS Advisory" class="show-on-light" />
+      <img src="/logos/cas-white.png" alt="CAS Advisory" class="show-on-dark" />
+    </a>
+    
+    <nav class="nav">
+      <a href="/#services" class:list={[{ active: currentPath === '/' }]}>Services</a>
+      <a href="/about" class:list={[{ active: currentPath === '/about' || currentPath === '/about/' }]}>About</a>
+      <a href="/research" class:list={[{ active: currentPath === '/research' || currentPath === '/research/' }]}>Research</a>
+      <a href="/cscx" class:list={[{ active: currentPath === '/cscx' || currentPath === '/cscx/' }]}>CSCX.ai</a>
+      <a href="/contact" class="nav-cta">Let's Talk</a>
+    </nav>
+    
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+      <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 48px;
+    width: auto;
+  }
+  
+  /* Light mode: show black logo, hide white logo */
+  .show-on-light { display: block; }
+  .show-on-dark { display: none; }
+  
+  /* Dark mode: show white logo, hide black logo */
+  [data-theme="dark"] .show-on-light { display: none; }
+  [data-theme="dark"] .show-on-dark { display: block; }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .nav a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color var(--transition);
+    position: relative;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    color: var(--text);
+  }
+  
+  .nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+  }
+  
+  .nav-cta {
+    background: var(--text) !important;
+    color: var(--bg) !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+  
+  .nav-cta::after { display: none !important; }
+  
+  .nav-cta:hover {
+    opacity: 0.85;
+  }
+  
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    color: var(--text);
+    transition: border-color var(--transition);
+  }
+  
+  .theme-toggle:hover {
+    border-color: var(--text);
+  }
+  
+  .icon-sun { display: block; }
+  .icon-moon { display: none; }
+  
+  [data-theme="dark"] .icon-sun { display: none; }
+  [data-theme="dark"] .icon-moon { display: block; }
+  
+  @media (max-width: 768px) {
+    .nav a:not(.nav-cta) {
+      display: none;
+    }
+    
+    .logo img {
+      height: 40px;
+    }
+  }
+</style>

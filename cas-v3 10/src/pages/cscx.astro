@@ -1,0 +1,717 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<Layout title="CSCX.ai" description="The Agentic Customer Success Platform — Automate workflows, orchestrate AI agents, and scale your post-sales operations">
+  <Header />
+  <main>
+    <!-- Hero -->
+    <section class="cscx-hero">
+      <div class="container">
+        <span class="label">Introducing CSCX.ai</span>
+        <h1 class="cscx-title">
+          The future of<br/>
+          Customer Success<span class="accent-dot">.</span>
+        </h1>
+        <p class="cscx-subtitle">
+          An agentic platform that automates CSM workflows, orchestrates AI agents 
+          across the customer journey, and turns your playbooks into living, 
+          intelligent systems.
+        </p>
+        <div class="cscx-cta">
+          <a href="#waitlist" class="btn btn-accent">
+            Join the Waitlist
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/contact" class="btn btn-outline">Talk to Founder</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem">
+      <div class="container">
+        <div class="problem-grid">
+          <div class="problem-content">
+            <span class="label">The Problem</span>
+            <h2 class="problem-title">
+              Customer Success is<br/>
+              drowning in manual work<span class="accent-dot">.</span>
+            </h2>
+          </div>
+          <div class="problem-stats">
+            <div class="problem-stat">
+              <span class="stat-number">60<span class="accent-dot">%</span></span>
+              <span class="stat-label">of CSM time spent on admin tasks</span>
+            </div>
+            <div class="problem-stat">
+              <span class="stat-number">88<span class="accent-dot">%</span></span>
+              <span class="stat-label">of AI pilots never reach production</span>
+            </div>
+            <div class="problem-stat">
+              <span class="stat-number">$0</span>
+              <span class="stat-label">value from fragmented point solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Solution Model -->
+    <section class="solution-model">
+      <div class="container">
+        <span class="label">The AI-Powered CS Model</span>
+        <h2 class="model-title">
+          From manual playbooks to<br/>
+          agentic orchestration<span class="accent-dot">.</span>
+        </h2>
+        
+        <div class="journey-visual">
+          <div class="journey-header">
+            <span class="journey-label">Post-Sales Customer Journey</span>
+          </div>
+          
+          <div class="journey-stages">
+            <div class="stage">
+              <div class="stage-box">Input</div>
+              <span class="stage-label">Sales Handoff</span>
+            </div>
+            <div class="stage-arrow">→</div>
+            <div class="stage">
+              <div class="stage-box">Onboard</div>
+              <span class="stage-label">Customer Onboarding</span>
+            </div>
+            <div class="stage-arrow">→</div>
+            <div class="stage">
+              <div class="stage-box">Adopt & Optimize</div>
+              <span class="stage-label">Drive Consumption</span>
+            </div>
+            <div class="stage-arrow">→</div>
+            <div class="stage">
+              <div class="stage-box">Renew</div>
+              <span class="stage-label">Revenue Protection</span>
+            </div>
+            <div class="stage-arrow">→</div>
+            <div class="stage">
+              <div class="stage-box">Expand</div>
+              <span class="stage-label">New Use Cases</span>
+            </div>
+          </div>
+          
+          <div class="csm-layer">
+            <span>Customer Success Manager (CSM)</span>
+          </div>
+          
+          <div class="agentic-layer">
+            <span class="agentic-label">Agentic Orchestration Layer</span>
+            <div class="tech-logos">
+              <span>LangChain</span>
+              <span>CrewAI</span>
+              <span>Botpress</span>
+              <span>OpenAI</span>
+            </div>
+          </div>
+        </div>
+        
+        <p class="model-note">
+          CSCX.ai sits beneath your CSM team, automating workflows and orchestrating 
+          AI agents that handle the heavy lifting—so your team can focus on relationships.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <span class="label">What CSCX.ai Does</span>
+        <h2 class="features-title">
+          Automate everything<br/>
+          except the relationship<span class="accent-dot">.</span>
+        </h2>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Faster, Structured Onboarding</h3>
+            <p>
+              Turn your CSM playbook into a living, automated workflow. 
+              Reduce time-to-value and ensure every customer gets a 
+              consistent, high-quality experience.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Agent-Powered Success Plans</h3>
+            <p>
+              Build and maintain customer success plans, action items, 
+              and exec-facing summaries automatically. AI agents keep 
+              everything up-to-date.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>Automated CSM Workflows</h3>
+            <p>
+              QBR prep, stakeholder mapping, renewal tracking, risk 
+              flagging—all automated. Your CSMs spend time on customers, 
+              not spreadsheets.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <h3>AI-Augmented GTM Operations</h3>
+            <p>
+              Automatically collect data from calls, CRM, and docs. 
+              Generate follow-ups, risk flags, and renewal narratives 
+              without manual effort.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Customer Health Intelligence</h3>
+            <p>
+              Real-time health scoring powered by usage telemetry, 
+              engagement signals, and predictive models. Know which 
+              accounts need attention before it's too late.
+            </p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Expansion & Renewal Playbooks</h3>
+            <p>
+              AI agents identify expansion opportunities and execute 
+              renewal playbooks. Protect and grow ARR systematically.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Value Prop -->
+    <section class="value">
+      <div class="container">
+        <div class="value-grid">
+          <div class="value-content">
+            <span class="label">The Outcome</span>
+            <h2 class="value-title">
+              Protect and expand ARR<span class="accent-dot">.</span><br/>
+              <span class="highlight">Eliminate grunt work.</span>
+            </h2>
+            <ul class="value-list">
+              <li>
+                <strong>Reduce manual CSM work by 60%+</strong> — 
+                Let AI handle data collection, reporting, and admin tasks
+              </li>
+              <li>
+                <strong>Improve time-to-value by 40%</strong> — 
+                Consistent, automated onboarding for every customer
+              </li>
+              <li>
+                <strong>Increase NRR through proactive engagement</strong> — 
+                AI-powered health scores catch risks early
+              </li>
+              <li>
+                <strong>Give leadership better visibility</strong> — 
+                Real-time dashboards on customer health and outcomes
+              </li>
+            </ul>
+          </div>
+          
+          <div class="value-visual">
+            <div class="metric-card">
+              <span class="metric-value">40<span class="accent-dot">%</span></span>
+              <span class="metric-label">Faster onboarding</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">60<span class="accent-dot">%</span></span>
+              <span class="metric-label">Less manual work</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">2x</span>
+              <span class="metric-label">CSM capacity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Waitlist -->
+    <section id="waitlist" class="waitlist">
+      <div class="container">
+        <div class="waitlist-content">
+          <span class="label">Early Access</span>
+          <h2 class="waitlist-title">
+            Be first to experience<br/>
+            agentic Customer Success<span class="accent-dot">.</span>
+          </h2>
+          <p class="waitlist-text">
+            CSCX.ai is currently in development. Join the waitlist to get 
+            early access, shape the product roadmap, and receive founding 
+            customer pricing.
+          </p>
+          
+          <form class="waitlist-form" name="cscx-waitlist" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="cscx-waitlist" />
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Work email" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="company" name="company" placeholder="Company name" />
+            </div>
+            <div class="form-group">
+              <select id="team-size" name="team-size">
+                <option value="">CS team size</option>
+                <option value="1-5">1-5 CSMs</option>
+                <option value="6-15">6-15 CSMs</option>
+                <option value="16-50">16-50 CSMs</option>
+                <option value="50+">50+ CSMs</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-accent btn-full">
+              Join Waitlist
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </form>
+          
+          <p class="waitlist-note">
+            Questions? Contact <a href="mailto:info@casadvisory.ca">info@casadvisory.ca</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Hero */
+  .cscx-hero {
+    padding-top: 160px;
+    padding-bottom: 5rem;
+    background: #000;
+    color: #fff;
+  }
+  
+  .cscx-hero .label {
+    color: var(--accent);
+  }
+  
+  .cscx-title {
+    font-size: var(--text-4xl);
+    margin-bottom: 1.5rem;
+  }
+  
+  .cscx-subtitle {
+    font-size: var(--text-xl);
+    max-width: 650px;
+    color: #999;
+    margin-bottom: 2.5rem;
+  }
+  
+  .cscx-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .cscx-hero .btn-outline {
+    border-color: #333;
+    color: #fff;
+  }
+  
+  .cscx-hero .btn-outline:hover {
+    border-color: #fff;
+  }
+  
+  /* Problem */
+  .problem {
+    background: var(--bg);
+  }
+  
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .problem-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .problem-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .problem-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .problem-stat:last-child {
+    border-bottom: none;
+  }
+  
+  .stat-number {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  
+  .stat-label {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+  }
+  
+  /* Solution Model */
+  .solution-model {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .solution-model .label {
+    color: var(--accent);
+  }
+  
+  .model-title {
+    font-size: var(--text-3xl);
+    margin-bottom: 3rem;
+  }
+  
+  .journey-visual {
+    background: #111;
+    padding: 2.5rem;
+    border: 1px solid #222;
+    margin-bottom: 2rem;
+  }
+  
+  .journey-header {
+    margin-bottom: 2rem;
+  }
+  
+  .journey-label {
+    font-size: var(--text-sm);
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .journey-stages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  .stage-box {
+    background: #fff;
+    color: #000;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    border-radius: 2rem;
+    white-space: nowrap;
+  }
+  
+  .stage-label {
+    font-size: var(--text-xs);
+    color: #666;
+    text-align: center;
+    max-width: 100px;
+  }
+  
+  .stage-arrow {
+    color: #444;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .csm-layer {
+    background: #333;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .agentic-layer {
+    background: #fff;
+    color: #000;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .agentic-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-logos span {
+    font-size: var(--text-sm);
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .model-note {
+    color: #999;
+    font-size: var(--text-base);
+    max-width: 700px;
+  }
+  
+  /* Features */
+  .features {
+    background: var(--bg-alt);
+  }
+  
+  .features-title {
+    font-size: var(--text-3xl);
+    margin-bottom: 3rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background: var(--bg);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    transition: all var(--transition);
+  }
+  
+  .feature-card:hover {
+    border-color: var(--text);
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: var(--text-base);
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-card p {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  
+  /* Value */
+  .value {
+    background: var(--bg);
+  }
+  
+  .value-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .value-title {
+    font-size: var(--text-3xl);
+    margin-bottom: 2rem;
+  }
+  
+  .value-title .highlight {
+    color: var(--text-muted);
+  }
+  
+  .value-list {
+    list-style: none;
+  }
+  
+  .value-list li {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+  }
+  
+  .value-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .value-list strong {
+    color: var(--text);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .value-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .metric-card {
+    background: var(--bg-alt);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  
+  .metric-card:first-child {
+    grid-column: span 2;
+  }
+  
+  .metric-value {
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .metric-label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+  
+  /* Waitlist */
+  .waitlist {
+    background: #000;
+    color: #fff;
+    padding: 6rem 0;
+  }
+  
+  .waitlist-content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .waitlist .label {
+    color: var(--accent);
+  }
+  
+  .waitlist-title {
+    font-size: var(--text-2xl);
+    margin-bottom: 1rem;
+  }
+  
+  .waitlist-text {
+    color: #999;
+    font-size: var(--text-base);
+    margin-bottom: 2rem;
+  }
+  
+  .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group input,
+  .form-group select {
+    background: #111;
+    border: 1px solid #333;
+    padding: 1rem;
+    font-family: var(--font);
+    font-size: var(--text-base);
+    color: #fff;
+    transition: border-color var(--transition);
+  }
+  
+  .form-group input::placeholder {
+    color: #666;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  
+  .btn-full {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .waitlist-note {
+    font-size: var(--text-sm);
+    color: #666;
+  }
+  
+  .waitlist-note a {
+    color: var(--accent);
+  }
+  
+  @media (max-width: 1024px) {
+    .cscx-title,
+    .problem-title,
+    .model-title,
+    .features-title,
+    .value-title {
+      font-size: var(--text-2xl);
+    }
+    
+    .problem-grid,
+    .value-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

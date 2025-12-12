@@ -1,0 +1,164 @@
+---
+// Hero.astro - Bold hero section
+---
+
+<section class="hero">
+  <div class="container">
+    <span class="label animate-fade-up">AI Transformation Advisory</span>
+    
+    <h1 class="hero-title animate-fade-up animate-delay-1">
+      From AI idea<br/>
+      <span class="highlight">to AI impact<span class="accent-dot">.</span></span>
+    </h1>
+    
+    <p class="hero-subtitle animate-fade-up animate-delay-2">
+      We help enterprises move from fragmented experiments<br class="hide-mobile"/>
+      to production-grade AI that delivers measurable results.
+    </p>
+    
+    <div class="hero-cta animate-fade-up animate-delay-3">
+      <a href="/contact" class="btn btn-primary">
+        Book Discovery Call
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+    
+    <div class="hero-stats animate-fade-up animate-delay-4">
+      <div class="stat">
+        <span class="stat-number">$300M<span class="accent-dot">+</span></span>
+        <span class="stat-label">ARR managed across F500 clients</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">82<span class="accent-dot">%</span></span>
+        <span class="stat-label">of leaders use GenAI weekly — only 1% are mature</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">3<span class="accent-dot">x</span></span>
+        <span class="stat-label">employees use AI more than leadership realizes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number">75<span class="accent-dot">%</span></span>
+        <span class="stat-label">see positive ROI when done right</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 4rem;
+  }
+  
+  .hero-title {
+    font-size: var(--text-hero);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 2rem;
+  }
+  
+  .highlight {
+    color: var(--text-muted);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--text-xl);
+    max-width: 650px;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .stat-number {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  
+  .stat-label {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    max-width: 200px;
+  }
+  
+  .stat-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--border);
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-stats {
+      gap: 2rem;
+    }
+    
+    .stat-divider:nth-of-type(2) {
+      display: none;
+    }
+    
+    .stat-number {
+      font-size: var(--text-xl);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+    
+    .hero-subtitle {
+      font-size: var(--text-lg);
+    }
+    
+    .hide-mobile {
+      display: none;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+    }
+    
+    .hero-stats {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    
+    .stat-divider {
+      width: 60px;
+      height: 1px;
+    }
+  }
+</style>

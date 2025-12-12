@@ -1,0 +1,123 @@
+---
+// Footer.astro
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/logos/cas-white.png" alt="CAS Advisory" class="footer-logo" />
+        <p class="footer-tagline">AI Transformation Advisory</p>
+      </div>
+      
+      <div class="footer-nav">
+        <div class="footer-col">
+          <span class="footer-heading">Services</span>
+          <a href="/#services">AI Readiness Diagnostic</a>
+          <a href="/#services">AI Strategy & Roadmap</a>
+          <a href="/#services">AI Transformation Program</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Company</span>
+          <a href="/about">About</a>
+          <a href="/research">Research</a>
+          <a href="/cscx">CSCX.ai</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+      
+      <div class="footer-contact">
+        <span class="footer-heading">Get in Touch</span>
+        <a href="mailto:info@casadvisory.ca">info@casadvisory.ca</a>
+        <a href="https://linkedin.com/in/aziz1904" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Atwater Burgundy Group Inc. O/A CAS Advisory. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #000;
+    color: #fff;
+    padding: 5rem 0 2rem;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #222;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-tagline {
+    font-size: var(--text-sm);
+    color: #999;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .footer-heading {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-col a,
+  .footer-contact a {
+    font-size: var(--text-sm);
+    color: #999;
+    transition: color var(--transition);
+  }
+  
+  .footer-col a:hover,
+  .footer-contact a:hover {
+    color: #fff;
+  }
+  
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .footer-bottom p {
+    font-size: var(--text-xs);
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .footer-nav {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+</style>
